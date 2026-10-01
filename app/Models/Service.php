@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Service extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'service_code',
+        'name',
+        'category',
+        'description',
+        'billing_type',
+        'default_rate',
+        'status',
+    ];
+
+    protected $casts = [
+        'default_rate' => 'decimal:2',
+    ];
+}
